@@ -76,9 +76,7 @@ digitallab/
 📸 Preview
 
 ✅ To-Do (Future Improvements)
-Add user registration and login
-
-Integrate third-party cloud storage options
+Add analytics
 
 Enable download as PDF feature
 

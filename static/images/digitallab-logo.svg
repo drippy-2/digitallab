@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle for the icon -->
+  <circle cx="30" cy="30" r="25" fill="url(#logoGradient)" opacity="0.1"/>
+  
+  <!-- Digital lab icon - Circuit board pattern -->
+  <g transform="translate(10, 10)">
+    <!-- Main circuit lines -->
+    <path d="M5 15 L35 15 M15 5 L15 35 M25 5 L25 35 M5 25 L35 25" 
+          stroke="url(#logoGradient)" 
+          stroke-width="2" 
+          fill="none"/>
+    
+    <!-- Circuit nodes -->
+    <circle cx="15" cy="15" r="3" fill="url(#logoGradient)"/>
+    <circle cx="25" cy="15" r="3" fill="url(#logoGradient)"/>
+    <circle cx="15" cy="25" r="3" fill="url(#logoGradient)"/>
+    <circle cx="25" cy="25" r="3" fill="url(#logoGradient)"/>
+    
+    <!-- Digital elements -->
+    <rect x="12" y="12" width="6" height="6" fill="url(#accentGradient)" rx="1"/>
+    <rect x="22" y="22" width="6" height="6" fill="url(#accentGradient)" rx="1"/>
+    
+    <!-- Binary code dots -->
+    <circle cx="8" cy="8" r="1" fill="url(#logoGradient)"/>
+    <circle cx="32" cy="8" r="1" fill="url(#logoGradient)"/>
+    <circle cx="8" cy="32" r="1" fill="url(#logoGradient)"/>
+    <circle cx="32" cy="32" r="1" fill="url(#logoGradient)"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="65" y="25" 
+        font-family="'Inter', 'Segoe UI', sans-serif" 
+        font-size="18" 
+        font-weight="700" 
+        fill="url(#logoGradient)">
+    DIGITALLAB
+  </text>
+  
+  <!-- Tagline -->
+  <text x="65" y="42" 
+        font-family="'Inter', 'Segoe UI', sans-serif" 
+        font-size="10" 
+        font-weight="400" 
+        fill="#6b7280" 
+        letter-spacing="1px">
+    DIGITAL SOLUTIONS
+  </text>
+  
+  <!-- Accent line -->
+  <line x1="65" y1="30" x2="185" y2="30" 
+        stroke="url(#accentGradient)" 
+        stroke-width="2" 
+        opacity="0.7"/>
+  
+  <!-- Small tech icons -->
+  <g transform="translate(170, 12)">
+    <!-- QR Code mini icon -->
+    <rect x="0" y="0" width="12" height="12" fill="none" stroke="url(#logoGradient)" stroke-width="1"/>
+    <rect x="2" y="2" width="2" height="2" fill="url(#logoGradient)"/>
+    <rect x="8" y="2" width="2" height="2" fill="url(#logoGradient)"/>
+    <rect x="2" y="8" width="2" height="2" fill="url(#logoGradient)"/>
+    <rect x="5" y="5" width="2" height="2" fill="url(#accentGradient)"/>
+  </g>
+  
+  <!-- Innovation dots -->
+  <g opacity="0.6">
+    <circle cx="190" cy="45" r="1.5" fill="url(#accentGradient)">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="185" cy="48" r="1" fill="url(#logoGradient)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="195" cy="50" r="0.8" fill="url(#accentGradient)">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

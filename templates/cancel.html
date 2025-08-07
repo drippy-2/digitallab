@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% block title %}Payment Cancelled - Digitallab CV Creator{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body p-5 text-center">
+                    <!-- Cancel Icon -->
+                    <div class="cancel-icon mb-4">
+                        <div class="bg-warning bg-gradient rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                            <i class="fas fa-times fa-3x text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Cancel Message -->
+                    <h1 class="h2 fw-bold text-warning mb-3">Payment Cancelled</h1>
+                    <p class="lead text-muted mb-4">No worries! Your payment was cancelled and no charges were made to your account.</p>
+                    
+                    <!-- What's Next -->
+                    <div class="what-next mb-4">
+                        <h5 class="fw-bold text-primary mb-3">What would you like to do next?</h5>
+                        <div class="d-grid gap-2">
+                            {% if current_user.is_authenticated and current_user.is_trial_active %}
+                                <div class="alert alert-info text-start">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    <strong>Good news!</strong> You still have {{ current_user.trial_days_left }} days left in your free trial.
+                                </div>
+                                <a href="{{ url_for('create_cv') }}" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-plus me-2"></i>Continue Creating CVs
+                                </a>
+                            {% endif %}
+                            
+                            <a href="{{ url_for('subscription') }}" class="btn btn-outline-primary">
+                                <i class="fas fa-crown me-2"></i>Try Again - Upgrade to Pro
+                            </a>
+                            <a href="{{ url_for('home') if current_user.is_authenticated else url_for('index') }}" class="btn btn-outline-secondary">
+                                <i class="fas fa-home me-2"></i>{{ 'Go to Dashboard' if current_user.is_authenticated else 'Back to Home' }}
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Why Upgrade -->
+                    <div class="why-upgrade text-start">
+                        <h6 class="fw-bold text-primary mb-3">Why upgrade to Pro?</h6>
+                        <div class="row">
+                            <div class="col-6">
+                                <ul class="list-unstyled small">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Unlimited CVs
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Premium Templates
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Analytics Dashboard
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-6">
+                                <ul class="list-unstyled small">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Priority Support
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Custom Branding
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check text-success me-2"></i>
+                                        Unlimited Storage
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Support -->
+            <div class="text-center mt-4">
+                <p class="text-muted">
+                    Having payment issues? 
+                    <a href="mailto:support@digitallab.com" class="text-primary text-decoration-none">
+                        <i class="fas fa-envelope me-1"></i>Contact Support
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// Add subtle animation
+document.addEventListener('DOMContentLoaded', function() {
+    const cancelIcon = document.querySelector('.cancel-icon');
+    if (cancelIcon) {
+        cancelIcon.style.transform = 'scale(0)';
+        cancelIcon.style.transition = 'transform 0.5s ease-out';
+        
+        setTimeout(() => {
+            cancelIcon.style.transform = 'scale(1)';
+        }, 300);
+    }
+});
+</script>
+{% endblock %}

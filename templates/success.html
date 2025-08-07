@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Payment Successful - Digitallab CV Creator{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-0 shadow-lg">
+                <div class="card-body p-5 text-center">
+                    <!-- Success Icon -->
+                    <div class="success-icon mb-4">
+                        <div class="bg-success bg-gradient rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 100px; height: 100px;">
+                            <i class="fas fa-check fa-3x text-white"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Success Message -->
+                    <h1 class="h2 fw-bold text-success mb-3">Payment Successful!</h1>
+                    <p class="lead text-muted mb-4">Welcome to Digitallab CV Creator Pro! Your subscription has been activated successfully.</p>
+                    
+                    <!-- Benefits List -->
+                    <div class="benefits-list text-start mb-4">
+                        <h5 class="fw-bold text-primary mb-3">You now have access to:</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">
+                                <i class="fas fa-crown text-warning me-3"></i>
+                                <strong>Unlimited CV Creation</strong>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-palette text-info me-3"></i>
+                                <strong>Premium Templates</strong>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-chart-bar text-success me-3"></i>
+                                <strong>Analytics & Insights</strong>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-headset text-primary me-3"></i>
+                                <strong>Priority Support</strong>
+                            </li>
+                            <li class="mb-2">
+                                <i class="fas fa-cloud text-secondary me-3"></i>
+                                <strong>Unlimited Cloud Storage</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-grid gap-2">
+                        <a href="{{ url_for('create_cv') }}" class="btn btn-primary btn-lg">
+                            <i class="fas fa-plus me-2"></i>Create Your First Pro CV
+                        </a>
+                        <a href="{{ url_for('home') }}" class="btn btn-outline-primary">
+                            <i class="fas fa-home me-2"></i>Go to Dashboard
+                        </a>
+                    </div>
+                    
+                    <!-- Additional Info -->
+                    <div class="mt-4 pt-4 border-top">
+                        <p class="text-muted small mb-0">
+                            <i class="fas fa-envelope me-1"></i>
+                            A confirmation email has been sent to your registered email address.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Support -->
+            <div class="text-center mt-4">
+                <p class="text-muted">
+                    Need help getting started? 
+                    <a href="mailto:support@digitallab.com" class="text-primary text-decoration-none">
+                        <i class="fas fa-envelope me-1"></i>Contact Support
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// Add celebration animation
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate the success icon
+    const successIcon = document.querySelector('.success-icon');
+    if (successIcon) {
+        successIcon.style.transform = 'scale(0)';
+        successIcon.style.transition = 'transform 0.5s ease-out';
+        
+        setTimeout(() => {
+            successIcon.style.transform = 'scale(1)';
+        }, 300);
+    }
+    
+    // Animate the benefits list
+    const benefitItems = document.querySelectorAll('.benefits-list li');
+    benefitItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-20px)';
+        item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateX(0)';
+        }, 800 + (index * 100));
+    });
+});
+</script>
+{% endblock %}

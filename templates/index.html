@@ -1,0 +1,221 @@
+s{% extends "base.html" %}
+
+{% block title %}Digitallab CV Creator - Professional CVs with QR Code Sharing{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Create Professional CVs with QR Code Sharing</h1>
+                    <p class="lead mb-4">Join thousands of professionals using Digitallab's cutting-edge CV creation platform. Build stunning resumes and share them instantly with QR codes.</p>
+                    
+                    <div class="feature-highlights mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>7-Day Free Trial</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-qrcode text-warning me-2"></i>
+                            <span>QR Code Sharing Technology</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="fas fa-mobile-alt text-info me-2"></i>
+                            <span>Mobile-Responsive CVs</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-crown text-gold me-2"></i>
+                            <span>Professional Templates</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <a href="{{ url_for('auth0.login') }}" class="btn btn-light btn-lg px-4 me-3">
+                            <i class="fas fa-rocket me-2"></i>Start Free Trial
+                        </a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-4">
+                            <i class="fas fa-info-circle me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image text-center">
+                    <div class="cv-mockup">
+                        <div class="card shadow-lg border-0" style="max-width: 400px; margin: 0 auto;">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="avatar bg-primary rounded-circle me-3" style="width: 50px; height: 50px;"></div>
+                                    <div>
+                                        <h6 class="card-title mb-1">Professional CV</h6>
+                                        <small class="text-muted">Instantly shareable</small>
+                                    </div>
+                                </div>
+                                <div class="qr-code-demo bg-light p-3 rounded text-center">
+                                    <i class="fas fa-qrcode fa-3x text-primary mb-2"></i>
+                                    <p class="small mb-0">Scan to view CV</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="h1 fw-bold text-primary">Why Choose Digitallab CV Creator?</h2>
+            <p class="lead text-muted">Advanced features designed for modern professionals</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-primary bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-qrcode fa-2x text-white"></i>
+                        </div>
+                        <h4 class="card-title">QR Code Technology</h4>
+                        <p class="card-text text-muted">Generate unique QR codes for instant CV sharing. Recipients can scan and view your professional profile immediately.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-success bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-palette fa-2x text-white"></i>
+                        </div>
+                        <h4 class="card-title">Professional Templates</h4>
+                        <p class="card-text text-muted">Choose from expertly designed templates that make your CV stand out to employers and recruiters.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-info bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-cloud fa-2x text-white"></i>
+                        </div>
+                        <h4 class="card-title">Cloud Storage</h4>
+                        <p class="card-text text-muted">Access your CVs from anywhere. All your professional documents are securely stored in the cloud.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-warning bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-mobile-alt fa-2x text-white"></i>
+                        </div>
+                        <h4 class="card-title">Mobile Responsive</h4>
+                        <p class="card-text text-muted">Your CVs look perfect on all devices. Optimized for smartphones, tablets, and desktops.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-danger bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-link fa-2x text-white"></i>
+                        </div>
+                        <h4 class="card-title">Social Integration</h4>
+                        <p class="card-text text-muted">Seamlessly integrate your LinkedIn, GitHub, portfolio, and other professional links.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon bg-purple bg-gradient rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 80px; height: 80px;">
+                            <i class="fas fa-chart-line fa-2x text-white"></i>
+                        </div>
+                        <h4 class="card-title">Analytics</h4>
+                        <p class="card-text text-muted">Track who views your CV and gain insights into your professional reach and engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="h1 fw-bold text-primary">Simple, Transparent Pricing</h2>
+            <p class="lead text-muted">Start with a free trial, then choose the plan that works for you</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <div class="pricing-card card border-primary shadow-lg">
+                    <div class="card-header bg-primary text-white text-center py-4">
+                        <h3 class="card-title mb-0">Free Trial</h3>
+                        <p class="card-text">7 days free</p>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <div class="price mb-4">
+                            <span class="h1 fw-bold">$0</span>
+                            <span class="text-muted">/week</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Create unlimited CVs</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>QR code generation</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Professional templates</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Cloud storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile responsive</li>
+                        </ul>
+                        <a href="{{ url_for('auth0.login') }}" class="btn btn-primary btn-lg w-100">Start Free Trial</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="pricing-card card border-success shadow-lg">
+                    <div class="card-header bg-success text-white text-center py-4">
+                        <h3 class="card-title mb-0">Pro Plan</h3>
+                        <p class="card-text">After trial period</p>
+                    </div>
+                    <div class="card-body text-center p-4">
+                        <div class="price mb-4">
+                            <span class="h1 fw-bold">$9.99</span>
+                            <span class="text-muted">/month</span>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Everything in Free Trial</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited CV storage</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Premium templates</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Analytics & insights</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Priority support</li>
+                        </ul>
+                        <a href="{{ url_for('auth0.login') }}" class="btn btn-success btn-lg w-100">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="h1 fw-bold mb-4">Ready to Create Your Professional CV?</h2>
+        <p class="lead mb-4">Join thousands of professionals who trust Digitallab for their career advancement</p>
+        <a href="{{ url_for('auth0.login') }}" class="btn btn-light btn-lg px-5">
+            <i class="fas fa-rocket me-2"></i>Start Your Free Trial Now
+        </a>
+    </div>
+</section>
+{% endblock %}

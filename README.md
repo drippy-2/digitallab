@@ -57,7 +57,7 @@ Run the app:
 bash
 Copy
 Edit
-flask run
+python main.py
 Visit:
 Open your browser at http://127.0.0.1:5000
 
@@ -69,7 +69,7 @@ digitallab/
 │
 ├── static/              # CSS, JS, Images
 ├── templates/           # HTML templates (Jinja2)
-├── app.py               # Main Flask application
+├── main.py               # Main Flask application
 ├── .gitignore
 ├── requirements.txt
 └── README.md

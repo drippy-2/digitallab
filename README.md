@@ -18,6 +18,8 @@ Access your CVs from anywhere, at any time. All documents are securely stored in
 ### 🔐 Secure User Authentication *(if implemented)*
 User accounts and access are secured through industry-standard authentication mechanisms.
 
+NB: AUTHO used for authentication. Create auth0_auth.py file.
+
 ---
 
 ## 🛠 Tech Stack
